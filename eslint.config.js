@@ -33,4 +33,10 @@ export default defineConfig([
       globals: globals.vitest, // It adds Vitest's global variables
     },
   },
+  {
+    files: ["scripts/**/*.js"],
+    languageOptions: {
+      globals: globals.node, // Tells ESLint this is a Node environment, fixing 'process'
+    },
+  },
 ]);
