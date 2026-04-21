@@ -1,0 +1,21 @@
+.header-content {
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+}
+
+.header-content p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin: 0;
+}

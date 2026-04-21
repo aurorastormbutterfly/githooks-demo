@@ -1,0 +1,72 @@
+/* General layout and typography */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Section spacing */
+main section {
+  margin-bottom: 3rem;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* New list layout for hooks */
+.hooks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hook-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hook-card:last-child {
+  border-bottom: none;
+}
+
+.hook-card h3 {
+  flex: 0 0 180px;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.hook-card code {
+  background-color: #f3e8ff;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.hook-card p {
+  flex: 1;
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hook-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hook-card h3 {
+    flex-basis: auto; /* Reset fixed width on smaller screens */
+    margin-bottom: 0.5rem;
+  }
+}

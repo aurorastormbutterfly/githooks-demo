@@ -1,0 +1,50 @@
+.intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.step {
+  margin-bottom: 2.5rem;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+.step p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.step pre {
+  background-color: #2d333b;
+  color: #c9d1d9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: var(--mono, monospace);
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+
+.important-note {
+  margin-top: 4rem;
+  padding: 1.5rem;
+  background-color: #f3e8ff;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.important-note h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.important-note p {
+  margin-bottom: 0;
+}
