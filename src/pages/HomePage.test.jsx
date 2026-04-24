@@ -17,7 +17,7 @@ describe("HomePage", () => {
       screen.getByRole("heading", { name: /what are git hooks/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /git hoks directory/i }),
+      screen.getByRole("heading", { name: /git hooks directory/i }),
     ).toBeInTheDocument();
   });
 

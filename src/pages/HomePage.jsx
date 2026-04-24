@@ -13,7 +13,6 @@ function HomePage() {
           actions at key points in the development life cycle.
         </p>
       </section>
-
       <section>
         <h2>Git Hooks Directory</h2>
         <div className="hooks-list">
