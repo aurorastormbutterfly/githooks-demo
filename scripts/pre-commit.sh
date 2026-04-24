@@ -40,3 +40,9 @@ npm run lint
 
 echo "Running pre-commit hook: Executing unit tests..."
 npm run test
+
+# Forward the execution to our version-controlled script
+#./scripts/pre-commit.sh
+
+# Forward the execution to our tracked Node.js script
+# node ./scripts/pre-commit.js
