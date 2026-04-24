@@ -29,6 +29,7 @@ function HomePage() {
       </section>
     </>
   );
+  // console.log("This will never run!");
 }
 
 export default HomePage;

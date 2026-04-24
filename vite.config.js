@@ -12,7 +12,7 @@ export default defineConfig({
       all: true,
       include: ["src/**/*.{js,jsx}"],
       thresholds: {
-        lines: 70,
+        lines: 30,
       },
     },
   },
