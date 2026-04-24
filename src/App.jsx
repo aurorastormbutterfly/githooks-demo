@@ -15,4 +15,6 @@ function App() {
   );
 }
 
+// DEMO commit works when tests pass
+
 export default App;
