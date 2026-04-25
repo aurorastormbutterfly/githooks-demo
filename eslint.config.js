@@ -27,8 +27,6 @@ export default defineConfig([
     rules: {
       "react/jsx-uses-vars": "error", // Tells ESLint that <Component /> counts as using the variable
       "no-unused-vars": ["error", { varsIgnorePattern: "^_" }],
-
-      // Explicit rules added for the live demo:
       "no-unreachable": "error", // Prevents code after a return statement
       eqeqeq: "error", // Enforces using === instead of ==
     },
