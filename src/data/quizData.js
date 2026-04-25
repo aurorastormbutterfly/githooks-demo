@@ -1,0 +1,163 @@
+export const quizData = {
+  questions: [
+    {
+      questionNumber: 1,
+      question: "Where are Git hooks stored within a project's directory?",
+      answerOptions: [
+        {
+          text: "In a /hooks folder in the project root",
+          rationale:
+            "Git natively ignores the root directory for its internal hooks; it only looks inside the hidden .git metadata folder.",
+          isCorrect: false,
+        },
+        {
+          text: "Inside the .git/hooks folder",
+          rationale:
+            "This is the default internal directory where Git looks for executable scripts to trigger during specific actions.",
+          isCorrect: true,
+        },
+        {
+          text: "Within the .gitignore file",
+          rationale:
+            "The .gitignore file manages which files Git should ignore, but it doesn't store or execute scripts.",
+          isCorrect: false,
+        },
+        {
+          text: "In the global ~/.gitconfig file",
+          rationale:
+            "Global configuration handles settings like user names, while hooks are specific to the local repository instance.",
+          isCorrect: false,
+        },
+      ],
+      hint: "Check the hidden directory where Git keeps all its internal repository metadata.",
+    },
+    {
+      questionNumber: 2,
+      question:
+        "Why don't your colleagues automatically get your new Git hook when they clone the repository?",
+      answerOptions: [
+        {
+          text: "Hooks must be registered in the remote repository's settings panel first.",
+          rationale:
+            "While some platforms have server-side hooks, client-side hooks are managed entirely on the local machine.",
+          isCorrect: false,
+        },
+        {
+          text: "Git automatically deletes scripts during a push to prevent malware spreading.",
+          rationale:
+            "Git doesn't delete them; it simply doesn't include the .git directory in the data sent to the remote.",
+          isCorrect: false,
+        },
+        {
+          text: "The .git directory is local to your machine; it is not tracked or pushed to the remote server.",
+          rationale:
+            "The .git folder is excluded from version control tracking, so local configurations and hooks are never part of the push/pull cycle.",
+          isCorrect: true,
+        },
+        {
+          text: "You need to run 'git push --hooks' to share them.",
+          rationale:
+            "There is no native Git command to push local hook scripts to a remote repository.",
+          isCorrect: false,
+        },
+      ],
+      hint: "Think about which parts of your project directory are actually tracked by version control.",
+    },
+    {
+      questionNumber: 3,
+      question:
+        "What command do you need to run to ensure your new hook script is allowed to execute?",
+      answerOptions: [
+        {
+          text: "git add [filename]",
+          rationale:
+            "This stages the file for a commit but does not modify the local file system permissions needed for execution.",
+          isCorrect: false,
+        },
+        {
+          text: "chown [filename]",
+          rationale:
+            "This command changes the owner of the file rather than its permission attributes.",
+          isCorrect: false,
+        },
+        {
+          text: "git config --run [filename]",
+          rationale:
+            "Git configuration is for settings; execution rights are managed by the operating system's file permissions.",
+          isCorrect: false,
+        },
+        {
+          text: "chmod +x [filename]",
+          rationale:
+            "This Unix command grants execution permissions to the file, which is a requirement for Git to run it as a script.",
+          isCorrect: true,
+        },
+      ],
+      hint: "You need to modify the file's permission bits to make it runnable.",
+    },
+    {
+      questionNumber: 4,
+      question:
+        "How does Git know whether to allow or block a commit based on your hook script?",
+      answerOptions: [
+        {
+          text: "It searches the console output for the word 'ERROR'.",
+          rationale:
+            "Git ignores the content of the output for logic; it only cares about the final status code of the process.",
+          isCorrect: false,
+        },
+        {
+          text: "It checks the exit code (0 for success, non-zero for failure).",
+          rationale:
+            "Git relies on standard process exit statuses; a zero indicates everything is fine, while any other number aborts the commit.",
+          isCorrect: true,
+        },
+        {
+          text: "It checks if the script finished in under 5 seconds.",
+          rationale:
+            "Hooks can take as long as needed to run tests; time elapsed doesn't determine success or failure.",
+          isCorrect: false,
+        },
+        {
+          text: "It looks for a boolean 'return true' at the end of the file.",
+          rationale:
+            "Shell scripts use exit codes to communicate with the calling process rather than programmatic return values.",
+          isCorrect: false,
+        },
+      ],
+      hint: "This is the standard way Unix-like systems determine if a script or command finished successfully.",
+    },
+    {
+      questionNumber: 5,
+      question:
+        "What is a primary benefit of using a pre-commit hook for linting and testing?",
+      answerOptions: [
+        {
+          text: "It makes the remote CI/CD pipeline run faster by skipping those checks.",
+          rationale:
+            "CI/CD pipelines should still run these checks to ensure total repository integrity; local hooks simply catch issues earlier.",
+          isCorrect: false,
+        },
+        {
+          text: "It prevents other developers from seeing your code until it is perfect.",
+          rationale:
+            "Hooks only affect your local commit process; they don't hide code, they just enforce a quality baseline before the commit is created.",
+          isCorrect: false,
+        },
+        {
+          text: "It shifts quality checks 'left', providing instant feedback and reducing cognitive load.",
+          rationale:
+            "By automating checks at the point of commit, developers get immediate feedback, ensuring code meets standards without having to remember manual steps.",
+          isCorrect: true,
+        },
+        {
+          text: "It automatically fixes all bugs and formatting errors for you.",
+          rationale:
+            "While some hooks can run auto-formatters, their main role is to check and validate, not necessarily to fix complex logic bugs.",
+          isCorrect: false,
+        },
+      ],
+      hint: "Consider the timing of the feedback loop compared to waiting for a remote build server.",
+    },
+  ],
+};
