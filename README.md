@@ -2,7 +2,7 @@
 
 Welcome to the interactive demo repository for the Git Hooks session! This project contains a simple React application that we will use to explore how Git hooks can help us shift left and catch issues before they are committed.
 
-> **Note on Participation:** Following along with the code is entirely optional! If you learn best through hands-on practice, we highly encourage you to set up the repository using the steps below. However, if you are a more visual or auditory learner, or if you don't use Git in your day-to-day role, you are more than welcome to simply sit back and enjoy the live demonstration.
+> **Note on Participation:** Following along with the code is entirely optional! If you learn best through hands-on practice, I highly encourage you to set up the repository using the steps below. However, if you are a more visual or auditory learner, or if you don't use Git in your day-to-day role, you are more than welcome to simply sit back and enjoy the live demonstration.
 
 ## Prerequisites
 If you choose to code along, please ensure you have the following installed:
@@ -45,7 +45,7 @@ By default, Git hooks live in the hidden `.git/hooks` directory. Because `.git` 
 
 To enforce hooks across an entire team so that everyone is running the same checks, you have a few options:
 
-1. **Tracked "Pointer" Scripts (Native Git / No dependencies):** As demonstrated in this repository, you can store your hook logic in a normal, tracked folder (like the `scripts/` directory in this project). Each team member then creates a tiny `.git/hooks/pre-commit` file on their local machine that simply executes the tracked script.
+1. **Tracked "Pointer" Scripts (Native Git / No dependencies):** As demonstrated in this repository, you can store your hook logic in a normal, tracked directory (like the `scripts/` directory in this project). Each team member then creates a tiny `.git/hooks/pre-commit` file on their local machine that simply executes the tracked script.
 
    For a bash script, their local hook would look like this:
    ```bash
