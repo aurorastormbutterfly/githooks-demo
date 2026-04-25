@@ -1,16 +1,40 @@
-# React + Vite
+# Git Hooks Demo 🪝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the interactive demo repository for the Git Hooks session! This project contains a simple React application that we will use to explore how Git hooks can help us shift left and catch issues before they are committed.
 
-Currently, two official plugins are available:
+> **Note on Participation:** Following along with the code is entirely optional! If you learn best through hands-on practice, we highly encourage you to set up the repository using the steps below. However, if you are a more visual or auditory learner, or if you don't use Git in your day-to-day role, you are more than welcome to simply sit back and enjoy the live demonstration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Prerequisites
+If you choose to code along, please ensure you have the following installed:
+- **Git**: Check by running `git --version` in your terminal. (Download: git-scm.com)
+- **Node.js**: Check by running `node -v` in your terminal. (Download: nodejs.org)
+- **An IDE**: Such as VS Code, to write your hook scripts and view the project files.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To follow along with the hands-on portions and complete the post-session challenge, please set up the project on your local machine:
 
-## Expanding the ESLint configuration
+### 1. Fork and Clone
+First, fork [this repository](https://github.com/aurorastormbutterfly/githooks-demo) to your own GitHub account. Then, clone your forked copy to your local machine:
+```bash
+git clone https://github.com/YOUR-USERNAME/githooks-demo.git
+cd githooks-demo
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Install Dependencies
+Run the following command to install the required Node.js packages (like React, Vite, ESLint, and Vitest):
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+Spin up the local web server to view the interactive directory and setup guide:
+```bash
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser to see the site!
+
+## Post-Session Challenge (extra credit) 👩‍🎓
+*Please note: You do not need to do this before the session! We will cover the basics together live.*
+
+After the demo, once you have the site running, navigate to the **Set-up** page in the navigation bar. Your challenge is to follow the instructions to write your very own local `pre-commit` hook using a bash script to check for unresolved //TODO or //FIXME comments in your code.
