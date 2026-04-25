@@ -31,6 +31,8 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm install
+    - name: Run unit tests
+      run: npm test -- --run
     - name: Build
       run: npm run build
     - name: Setup Pages
