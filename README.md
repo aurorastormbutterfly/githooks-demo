@@ -38,3 +38,24 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to see the s
 *Please note: You do not need to do this before the session! We will cover the basics together live.*
 
 After the demo, once you have the site running, navigate to the **Set-up** page in the navigation bar. Your challenge is to follow the instructions to write your very own local `pre-commit` hook using a bash script to check for unresolved //TODO or //FIXME comments in your code.
+
+## Sharing Hooks Across Your Team 🤝
+
+By default, Git hooks live in the hidden `.git/hooks` directory. Because `.git` is local to your machine and isn't version-controlled, any scripts you write there **won't** be shared with your team when you push your code.
+
+To enforce hooks across an entire team so that everyone is running the same checks, you have a few options:
+
+1. **Tracked "Pointer" Scripts (Native Git / No dependencies):** As demonstrated in this repository, you can store your hook logic in a normal, tracked folder (like the `scripts/` directory in this project). Each team member then creates a tiny `.git/hooks/pre-commit` file on their local machine that simply executes the tracked script.
+
+   For a bash script, their local hook would look like this:
+   ```bash
+   #!/bin/sh
+   ./scripts/pre-commit.sh
+   ```
+   Or, if your tracked hook is written in Node.js:
+   ```bash
+   #!/bin/sh
+   node ./scripts/pre-commit.js
+   ```
+2. **Husky (Node.js Ecosystem):** Husky is an incredibly popular npm package that automatically handles the `core.hooksPath` setup for your team as soon as they run `npm install`.
+3. **Lefthook or pre-commit (Language Agnostic):** Tools like Lefthook or pre-commit let you define your team's hooks in a simple `.yml` configuration file. These are excellent choices for repositories that use multiple programming languages.
