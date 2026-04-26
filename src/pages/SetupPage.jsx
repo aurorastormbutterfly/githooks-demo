@@ -57,8 +57,8 @@ function SetupPage() {
         <pre>
           <code>
             #!/bin/sh{"\n"}
-            {"\n"}# Redirect output to stderr.
-            {"\n"}exec &gt;&2{"\n"}
+            {"\n"}# Exit immediately if a command fails
+            {"\n"}set -e{"\n"}
             {"\n"}# Check for "TODO" in staged files
             {"\n"}if git diff --cached | grep -q 'TODO'; then
             {"\n"} echo "Error: Found 'TODO' in staged changes. Please remove it
