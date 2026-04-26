@@ -20,6 +20,14 @@ function Navbar() {
       >
         Tutorial
       </NavLink>
+      <NavLink
+        to="/quiz"
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+      >
+        Quiz
+      </NavLink>
     </nav>
   );
 }
