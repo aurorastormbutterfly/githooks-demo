@@ -41,8 +41,8 @@ npm run lint
 echo "Running pre-commit hook: Executing unit tests..."
 npm run test
 
-# Forward the execution to our version-controlled script
-#./scripts/pre-commit.sh
-
-# Forward the execution to our tracked Node.js script
-# node ./scripts/pre-commit.js
+# To use this script, create a file named `.git/hooks/pre-commit` (no extension)
+# and paste the following code into it:
+#
+# #!/bin/sh
+# ./scripts/pre-commit.sh

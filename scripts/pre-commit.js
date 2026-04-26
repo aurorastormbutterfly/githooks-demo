@@ -53,3 +53,9 @@ try {
   // If any command fails (like the linter or tests), execSync throws an error.
   process.exit(1); // Abort the commit
 }
+
+// To use this script, create a file named `.git/hooks/pre-commit` (no extension)
+// and paste the following code into it:
+//
+// #!/bin/sh
+// node ./scripts/pre-commit.js
