@@ -49,7 +49,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to see the s
 
 _Please note: You do not need to do this before the session! We will cover the basics together live._
 
-After the demo, once you have the site running, navigate to the **Set-up** page in the navigation bar. Your challenge is to follow the instructions to write your very own local `pre-commit` hook using a bash script to check for unresolved //TODO or //FIXME comments in your code.
+After the demo, once you have the site running, navigate to the **Tutorial** page in the navigation bar. Your challenge is to follow the instructions to write your very own local `pre-commit` hook using a bash script to check for unresolved //TODO or //FIXME comments in your code.
 
 ## Sharing Hooks Across Your Team 🤝
 

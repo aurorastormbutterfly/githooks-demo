@@ -13,12 +13,12 @@ function Navbar() {
         Home
       </NavLink>
       <NavLink
-        to="/setup"
+        to="/tutorial"
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
         }
       >
-        Set-up
+        Tutorial
       </NavLink>
     </nav>
   );

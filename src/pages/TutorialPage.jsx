@@ -1,6 +1,6 @@
-import "./SetupPage.css";
+import "./TutorialPage.css";
 
-function SetupPage() {
+function TutorialPage() {
   return (
     <section>
       <h2>Setting Up a Local Pre-Commit Hook</h2>
@@ -105,4 +105,4 @@ function SetupPage() {
   );
 }
 
-export default SetupPage;
+export default TutorialPage;
